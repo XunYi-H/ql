@@ -91,7 +91,7 @@ class Ltljj():
                 self.msg += xx
                 return self.msg
         except:
-            xx = "请检查ck是否有效或者更换尝试！！！"
+            xx = "请检查ck是否有效或者更换尝试！！！\n\n"
             self.msg += xx
             return self.msg
 

@@ -1,7 +1,7 @@
 """
 cron: 30 8 * * *
 new Env('统一快乐星球');
-
+122
 统一快乐星球小程序签到
 抓包域名: https://xapi.weimob.com
 抓包请求头里面: x-wx-token: xxxxx
