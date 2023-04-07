@@ -97,7 +97,7 @@ class Ltljj():
 
 
 if __name__ == '__main__':
-    token = get_environ("ltljjck") if environ.get("ltljjck") else refresh_token
+    token = get_environ("ltljjck")
     msg = ''
     cks = token.split("&")
     print("检测到{}个ck记录".format(len(cks)))
