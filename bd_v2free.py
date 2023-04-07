@@ -1,6 +1,6 @@
 """
 cron: 24 8 * * *
-new Env('V2free签到(测试)');
+new Env('V2free签到测试');
 注册地址： https://w1.v2free.top/auth/register?code=i6DB
 抓包地址: https://go.runba.cyou/user/checkin
 抓包请求头里面: cookie 包含 _ga,_gid..等复制cookie填入变量
