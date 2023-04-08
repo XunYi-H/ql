@@ -1,7 +1,6 @@
 """
 cron: 0 8 * * *
 new Env('glados签到');
-glados签到(免费梯子)
 地址：https://glados.rocks
 抓包域名: https://glados.rocks/api/user/checkin
 抓包请求头里面: cookie 包含 _ga,_gid..等复制cookie填入变量
