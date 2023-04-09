@@ -4,6 +4,7 @@ new Env('联通立减金签到');
 中国联通app-我的-钱包-立减金
 抓包地址: https://epay.10010.com/ci-mcss-party-front/v1/ttlxj/unifyDrawNew
 抓包请求头里面: authinfo 的 sessionId或者tokenId 是一样的 ps-pafs开头的
+失效很快
 环境变量 ltljjck = sessionId或者tokenId的值
 多账号新建变量或者用 & 分开
 
