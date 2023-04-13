@@ -50,7 +50,7 @@ def sign(authorization, pwd):
             print("[提现]：提现佣金不足")
 
     msg = "[账号]：{}\n[用户]：{}\n[签到]：{}\n[余额]：{}".format(a, info['data']['nickname'], response['msg'],
-                                                       info['data']['brokerage_price'])
+                                                              info['data']['brokerage_price'])
     print(msg)
     print(txmsg)
     ts_msg = "热度星客签到\n" + msg + '\n' + txmsg
@@ -89,7 +89,6 @@ def get_environ(key, default="", output=True):
 
 if __name__ == '__main__':
     authori_zation = get_environ("rdxkck")
-
     cks = authori_zation.split("&")
     print("检测到{}个ck记录\n开始热度星客签到".format(len(cks)))
     print()
