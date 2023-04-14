@@ -1,4 +1,6 @@
 """
+
+time：2023.4.14
 cron: 23 0 * * *
 new Env('ikun签到');
 地址：https://ikuuu.eu/
@@ -94,3 +96,7 @@ if __name__ == '__main__':
     if send:
         send("ikun签到通知", msg)
 
+"""
+测试
+${INSERT_HERE}
+"""

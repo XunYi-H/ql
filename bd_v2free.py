@@ -1,4 +1,5 @@
 """
+time：2023.4.14
 cron: 24 8 * * *
 new Env('V2free签到测试');
 注册地址： https://w1.v2free.top/auth/register?code=i6DB
