@@ -1,4 +1,6 @@
 """
+
+time：2023.4.16
 cron: 23 0 * * *
 new Env('ikun签到');
 地址：https://ikuuu.eu/
@@ -60,19 +62,29 @@ class Ikun():
         }
 
         r = requests.post(url, headers=headers)
-        if r.status_code == 200:
+        if r.status_code != 200:
+            xx = f"[账号]：{a}\n[签到]：请求失败，请检查网络或者ck有效性：{self.ck}\n\n"
+            print(xx)
+            self.msg += xx
+            return self.msg
+        try:
             if "已经签到" in r.json()['msg']:
                 xx = f"[账号]：{a}\n[签到]：{r.json()['msg']}\n\n"
                 print(xx)
                 self.msg += xx
                 return self.msg
-            else:
+            elif "获得" in r.json()['msg']:
                 xx = f"[账号]：{a}\n[签到]：{r.json()['msg']}\n\n"
                 print(xx)
                 self.msg += xx
                 return self.msg
-        else:
-            xx = f"[账号]：{a}\n[签到]：请检查网络或者ck有效性：{self.ck}\n\n"
+            else:
+                xx = f"[账号]：{a}\n[签到]：未知错误，请检查网络或者ck有效性：{self.ck}\n\n"
+                print(xx)
+                self.msg += xx
+                return self.msg
+        except:
+            xx = f"[账号]：{a}\n[签到]：解析响应失败，请检查网络或者ck有效性：{self.ck}\n\n"
             print(xx)
             self.msg += xx
             return self.msg
@@ -94,3 +106,7 @@ if __name__ == '__main__':
     if send:
         send("ikun签到通知", msg)
 
+"""
+测试
+${INSERT_HERE}
+"""

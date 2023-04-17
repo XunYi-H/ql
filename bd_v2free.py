@@ -1,4 +1,5 @@
 """
+time：2023.4.14
 cron: 24 8 * * *
 new Env('V2free签到测试');
 注册地址： https://w1.v2free.top/auth/register?code=i6DB
@@ -38,9 +39,8 @@ load_send()
 # 获取环境变量
 def get_environ(key, default="", output=True):
     def no_read():
-        if output:
-            print(f"未填写环境变量 {key} 请添加")
-            exit(0)
+        print(f"未填写环境变量 {key} 请添加")
+        exit(0)
         return default
 
     return environ.get(key) if environ.get(key) else no_read()
@@ -93,4 +93,3 @@ if __name__ == '__main__':
         msg += run.get_sign_msg()
     if send:
         send("v2free签到通知", msg)
-
